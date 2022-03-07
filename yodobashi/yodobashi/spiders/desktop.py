@@ -14,11 +14,13 @@ class DesktopSpider(scrapy.Spider):
             maker = product.xpath('.//div[contains(@class,"pName")]/p[1]/text()').get()
             name = product.xpath('.//div[contains(@class,"pName")]/p[2]/text()').get()
             price = product.xpath('.//span[contains(@class,"productPrice")]/text()').get()
+            url = product.xpath('//div[contains(@class,"productListTile")]/a[contains(@class,"js-clicklog-check")]/@href').get()
 
             yield {
                 'maker': maker,
                 'name': name,
-                'price': price
+                'price': price,
+                'url': url
             }
 
         next_page = response.xpath("//a[@class='next']")
