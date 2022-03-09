@@ -1,0 +1,17 @@
+Server: nginx
+Date: Wed, 09 Mar 2022 12:55:15 GMT
+Content-Type: text/html;charset=UTF-8
+Set-Cookie: JSESSIONID=52EABA68DD7C3AB9DC381A8CF0A44BDB; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=52EABA68DD7C3AB9DC381A8CF0A44BDB; Path=/; Secure; HttpOnly
+Set-Cookie: V1_PSH=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure
+Set-Cookie: V1_COMM_005=DE9864F7975DFC1936C5F148FCDA409BA159B7A6754CFE02; Expires=Tue, 07-Jun-2022 12:55:15 GMT; Path=/; Secure
+Set-Cookie: V1_GENREA_DISPLAY=02; Expires=Tue, 07-Jun-2022 12:55:15 GMT; Path=/; Secure
+Set-Cookie: V1_FAIR_DISPLAY=02; Expires=Tue, 07-Jun-2022 12:55:15 GMT; Path=/; Secure
+Set-Cookie: V1_GOODS_DISPLAY=02; Expires=Tue, 07-Jun-2022 12:55:15 GMT; Path=/; Secure
+Set-Cookie: V1_disp_history=101001037028005; Expires=Tue, 07-Jun-2022 12:55:15 GMT; Path=/disp; Secure
+Set-Cookie: sn=06; Path=/; secure
+Last-Modified: Wed, 09 Mar 2022 12:55:15 GMT
+Expires: Wed, 31 Dec 1969 15:00:00 GMT
+Pragma: no-cache
+Cache-Control: no-cache, no-store
+Content-Language: en
