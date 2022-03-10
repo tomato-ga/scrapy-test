@@ -99,5 +99,5 @@ DEPTH_PRIORITY = 1
 SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
 SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 
-LOG_FILE = 'log_test.txt'
-LOG_LEVEL = 'INFO'
+# LOG_FILE = 'log_test.txt'
+# LOG_LEVEL = 'INFO'

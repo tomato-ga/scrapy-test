@@ -1,8 +1,8 @@
-from math import prod
 import scrapy
 import logging
 
-"""response.follow: 商品ページのリンクに.get()を付け忘れていた   """
+"""response.follow: 商品ページのリンクに.get()を付け忘れていた
+logging 入れたら動かない？"""
 
 
 class AmazonSpider(scrapy.Spider):
@@ -12,10 +12,10 @@ class AmazonSpider(scrapy.Spider):
 
     def parse(self, response):
         ranks = response.xpath('//div[contains(@class, "zg-grid-general-faceout")]')
-        logging.debug ({
-            "response.status": response.url,
-            "response.rank": response.rank
-        })
+        # logging.debug ({
+        #     "response.status": response.url,
+        #     "response.rank": response.rank
+        # })
 
         for rank in ranks:
             # urls = rank.xpath('.//div[@class="zg-grid-general-faceout"]/div/a[1]/@href').get()
