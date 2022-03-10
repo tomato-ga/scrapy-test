@@ -98,3 +98,6 @@ DEPTH_PRIORITY = 1
 # リクエストスケジュールをリクエストがきた順番にするFifo方式にする
 SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
 SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
+
+LOG_FILE = 'log_test.txt'
+LOG_LEVEL = 'INFO'
