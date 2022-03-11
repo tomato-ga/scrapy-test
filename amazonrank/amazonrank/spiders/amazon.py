@@ -1,5 +1,6 @@
 import scrapy
-import logging
+from amazonrank.items import AmazonrankItem
+from scrapy.loader import ItemLoader
 
 """response.follow: 商品ページのリンクに.get()を付け忘れていた
 logging 入れたら動かない？"""
@@ -41,8 +42,14 @@ class AmazonSpider(scrapy.Spider):
     def parse_item(self, response):
         main_info = response.xpath('//div[@id="centerCol"]')
 
-        yield {
-            'title': self.get_name(main_info.xpath(".//span[@id='productTitle']/text()").get()),
-            'price': self.get_price(main_info.xpath(".//span[@class='a-price-whole']/text()").get()),
-            'rating': self.get_rating(main_info.xpath(".//span[@id='acrCustomerReviewText']/text()").get())
-        }
+        loader = ItemLoader(item=AmazonrankItem(), response=response)
+        loader.add_xpath('title',  "//span[@id='productTitle']/text()")
+        loader.add_xpath('price', "//span[@class='a-price-whole']/text()")
+        loader.add_xpath('rating', "//span[@id='acrCustomerReviewText']/text()")
+        yield loader.load_item()
+
+        # yield {
+        #     'title': self.get_name(main_info.xpath(".//span[@id='productTitle']/text()").get()),
+        #     'price': self.get_price(main_info.xpath(".//span[@class='a-price-whole']/text()").get()),
+        #     'rating': self.get_rating(main_info.xpath(".//span[@id='acrCustomerReviewText']/text()").get())
+        # }
